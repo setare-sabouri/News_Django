@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{%block title%}
+اخبار کلاس ها
+{%endblock%}
+
+{% block content %}
+<div class="jmb">
+    <div class="jumbotron">
+        <center>
+            <form>
+            <h1>اخبار آخرین وضعیت برگزاری کلاس ها</h1>
+            <br/>
+            <a href="{% url 'News:list' %}" class="btn btn-danger">تازه‌سازی</a>
+            </form>
+        </center>
+    </div>
+</div>
+    <div class="news-wrapper"> 
+        {% for new in newsObjs %}
+        <div class="row new-item">
+            <p class="col-md-3">{{new.snippet}}</p> 
+            <!-- <p class="col-md-2" > {{new.date}} </p> -->
+            <p class="col-md-3 author" >توسط استاد {{new.author.first_name}}{{new.author.last_name}} </p>
+            <h3 class="col-md-4">
+                <a href="{% url 'News:Detail' slug=new.slug %}"> {{new.title}} </a>
+            </h3>
+                   
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

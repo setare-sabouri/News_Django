@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}ورود کاربر{% endblock %}
+
+{% block content %}
+<div class="login-page">
+    <h4>ورود به سایت</h4>
+    <p> لطفا اطلاعات کاربری خود را جهت ورود به سایت وارد کنید</p>
+    <form class="site-form" action="{% url 'accounts:login' %}" method="post">
+      {{form}}
+      {% csrf_token %}
+      {% if request.GET.next %}
+      <input type="hidden" name="next" value="{{request.GET.next}}">
+      {% endif %}
+      <input class="login-btn" type="submit" value="login">
+    </form>
+</div>
+{%endblock%}

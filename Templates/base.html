@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
+    <title>
+       اخبارکلاس ها
+    </title>
+    <link rel="stylesheet" href="{%static 'styles.css'%}">
+
+    {% block stylelink %}
+        
+    {% endblock stylelink %}
+
+</head>
+
+<body>
+
+    <div class="wrapper">  <!--it helps with css-->
+
+        {% block nav %}
+            {% include "partials/navigation.html" %}
+        {% endblock nav %}
+
+
+        {% block content %}
+
+        {% endblock %}
+
+        
+        {% block footer %}
+            {% include "partials/footer.html" %}
+        {% endblock footer %}
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+body{
+    background: rgb(240, 245, 240);
+    direction: rtl;
+}
+.banner{
+    padding-bottom: 4%;
+    text-align-last: center;   
+    background-image: url(images/ban2.jpg);
+    
+    background-size: cover;
+ }
+.banner img{
+    margin-top: 2%;
+}
+.nav-wrapper {
+    margin: 4%;
+    background-color: #0d3661;
+    padding-top: 3%;
+    padding-bottom: 3%;  
+    text-align: center;
+    font-size: 16px;
+
+}
+.navbar ul li {
+    list-style: none;
+    border-left: 1px solid #d6d6da;
+    display: inline-block;
+    padding: 0 30px;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+  }
+.nav-link{
+color: #f0eeee;
+
+}
+.navbar ul{
+    display: inline;
+}
+
+.navbar button{
+    border: none;
+    background: none;
+    color: #f0eeee;
+}
+
+li a:hover {
+    color: #08141d;
+    text-decoration: underline;
+    text-decoration-line: underline;
+  }
+li {
+    text-decoration: underline;
+}
+
+
+.jmb{
+    padding: 5%;
+}
+.jumbotron{
+    background-color: #0d3661;
+    color: #f0eeee;
+  }
+
+.news-wrapper{
+    display: grid;
+}
+
+.news-wrapper .new-item{
+    margin: 3%;
+    padding: 4%;
+    background-color: #0d3661;
+    border-style: solid;
+    border-color: #07d635;
+    display: inline-flex;
+    text-align: left;
+    color: #f0eeee;
+}
+
+.news-wrapper p{
+    text-align: right;
+}
+
+.News-detail span{
+    font-weight: bold;
+    background: #279ea47a;
+    border-radius: 9%;
+}
+
+.News-detail p{
+    padding: 2% 3%;
+    font-size: 109%;
+}
+
+.News-detail img{
+    
+    padding-bottom: 10%;
+}
+.News-detail .New{
+    padding: 5% 0%;
+    background: #8bd2e7a8;
+    margin: 0% 4%;
+}
+/* login page */
+
+.login-page{
+    width: 75%;
+    padding: 6%;
+    margin: 0% 15%
+    
+}
+.login-page h4{
+    text-align: right;
+    padding-bottom: 5%;
+}
+.site-form{
+    color: aliceblue;
+    background: #0d3661;
+    display: grid;
+    margin: 6% 20%;
+    border-radius: 3%;
+    padding: 7%;
+}
+
+.site-form .login-btn {
+    width: 25%;
+    margin-top: 5%;
+    justify-self: center;
+}
+
+.site-form .login-btn:hover{
+    background-color: rgba(1, 231, 51, 0.548);
+}
+
+.site-form input{
+    margin: 1%;
+    width: 45%;
+    text-align: center;
+    justify-self: center;
+    margin-bottom: 4%;
+    background-color: lightgray;
+    height: 55%;
+}
+span.helptext{
+        border-radius: 5%;
+        padding: 5%;
+        margin-bottom: 4%;
+        background: #55d33d54;
+}
+
+.sign-up-form h1{
+    text-align: center;
+}
+
+label {
+    text-align-last: center;
+    margin: 0%;
+}
+/* news detail */
+.News-detail{
+    text-align: center;
+}
+
+/* contact page  */
+
+.contact_us{
+    margin: 4%;
+    padding: 5% 10%;
+    color: aliceblue;
+    background: #0d3661;
+}
+
+.contact_us h2{
+    margin-bottom: 3%;
+}
+.contact_us div{
+    margin-top: 5%;
+}

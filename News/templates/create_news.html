@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="create-News">
+    <h1>
+      ثبت خبر جدید
+    </h1>
+    <form class="site-form" action="{% url 'News:create' %}" method="post" enctype="multipart/form-data">
+      {{form}}
+      {% csrf_token %}
+      <input type="submit" name="" value="create">
+    </form>
+  </div>
+{%endblock%}

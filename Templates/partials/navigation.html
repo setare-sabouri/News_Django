@@ -1,0 +1,59 @@
+{% load static %}
+
+<div class="banner" id="banner">
+  <div class="logo">
+      <a href="{% url 'News:list' %}">
+        <img src="{% static 'images/logo2.png' %}" alt="sadjad logo">
+      </a>
+  </div>
+</div>
+
+
+  <div class="nav-wrapper">
+    <nav class="navbar navbar-expand-lg">
+      <div class="navbar-top">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'News:list' %}">صفحه اصلی</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'News:contact' %}">راه های ارتباطی</a>
+                </li>
+
+                {% if user.is_authenticated %}
+
+
+                <li class="nav-item">
+                  <a  class="nav-link" href="{% url 'News:create' %}">ثبت خبر جدید</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" >
+                  <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">خروج </button>
+                  </form>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a  class="nav-link" href="/admin">پنل ادمین</a>
+                </li>
+
+
+                {% else %}
+
+                <li class="nav-item">
+                  <a  class="nav-link" href="{% url 'accounts:login' %}">ورود</a>
+                </li>
+
+                <li class="nav-item">
+                  <a  class="nav-link" href="{% url 'accounts:signup' %}">ثبت نام</a>
+                </li>
+        
+                {% endif %}
+            </ul>
+      </div>
+    </nav>
+  </div>
